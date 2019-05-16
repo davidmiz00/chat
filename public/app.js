@@ -191,7 +191,9 @@ document.addEventListener('click', async ev => {
     const credentials = getCredentials();
 
     // First create the user
+    console.log("Credentials start");
     await client.service('users').create(credentials);
+    console.log("Credentials done");
     // If successful log them in
     await login(credentials);
 

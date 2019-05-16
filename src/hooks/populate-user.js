@@ -9,6 +9,8 @@ module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
     // Make sure that we always have a list of messages either by wrapping
     // a single message into an array or by getting the `data` from the `find` method's result
     const messages = method === 'find' ? result.data : [ result ];
+    // const messages = method === 'find' ? result.data :
+    //   (Array.isArray(result) ? result : [ result ]);
 
     // Asynchronously get user object from each message's `userId`
     // and add it to the message
